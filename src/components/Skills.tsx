@@ -40,7 +40,7 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="skills-section py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -54,14 +54,14 @@ const Skills = () => {
             </p>
           </div>
 
-          {/* Category Tabs */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-white dark:bg-gray-900 rounded-full p-1 shadow-lg">
+          {/* Category Tabs - Mobile-First */}
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <div className="inline-flex flex-col sm:flex-row bg-white dark:bg-gray-900 rounded-2xl sm:rounded-full p-1 shadow-lg w-full sm:w-auto">
               {Object.entries(skillCategories).map(([key, category]) => (
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-6 py-3 rounded-xl sm:rounded-full font-medium transition-all duration-300 text-sm sm:text-base w-full sm:w-auto ${
                     activeCategory === key
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -73,8 +73,8 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Skills Grid - Mobile-First */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {skillCategories[activeCategory].skills.map((skill, index) => (
               <div 
                 key={skill.name}

@@ -76,7 +76,7 @@ const Projects = () => {
     : projects.filter(project => project.category === filter)
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="projects-section py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -90,16 +90,16 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+          {/* Filter Tabs - Mobile-First */}
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <div className="inline-flex flex-col sm:flex-row bg-gray-100 dark:bg-gray-800 rounded-2xl sm:rounded-full p-1 w-full sm:w-auto">
               {categories.map((category) => (
                 <button
                   key={category.key}
                   onClick={() => setFilter(category.key)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-6 py-3 rounded-xl sm:rounded-full font-medium transition-all duration-300 text-sm sm:text-base w-full sm:w-auto ${
                     filter === category.key
-                      ? 'bg-white dark:bg-gray-700 text-purple-600 dark:text-purple-400 shadow-md'
+                      ? 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-lg'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >
@@ -109,8 +109,8 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Projects Grid - Mobile-First */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {filteredProjects.map((project, index) => (
               <div 
                 key={project.id}
