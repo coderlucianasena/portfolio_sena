@@ -157,12 +157,18 @@ const Experience = () => {
 
           {/* Education Section */}
           <div className="mt-20">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Formação Acadêmica
-            </h3>
+            <div className="text-center mb-12">
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Minha <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Formação</span>
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mb-6"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Minha jornada acadêmica e desenvolvimento contínuo
+              </p>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   Bacharelado em Engenharia de Software
                 </h4>
@@ -172,10 +178,9 @@ const Experience = () => {
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   2023 - 2026
                 </p>
-
               </div>
 
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   Desenvolvimento Backend
                 </h4>

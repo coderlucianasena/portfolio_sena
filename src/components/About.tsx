@@ -38,7 +38,7 @@ const About = () => {
             {/* Right Column - Content */}
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                Desenvolvedora Fullstack Apaixonada por Tecnologia
+                Desenvolvedora Frontend Apaixonada por Tecnologia
               </h3>
 
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -52,7 +52,7 @@ const About = () => {
                 Trabalho principalmente com React, Node.js e TypeScript.
                 Acredito que a melhor tecnologia é aquela que resolve problemas reais de forma simples
                 e eficiente. Estou sempre aprendendo e me adaptando às novas tendências do mercado.
-                Atualmente, estou estudando Python e bancos de dados modernos.
+                Atualmente, estou estudando Python e bancos de dados modernos. Rumo ao Fullstack!
               </p>
 
               {/* Stats */}
