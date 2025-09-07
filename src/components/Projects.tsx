@@ -61,14 +61,71 @@ const Projects = () => {
       live: '#',
       featured: false
     },
+    {
+      id: 6,
+      title: 'Sistema de ML para Análise de Sentimentos',
+      description: 'Modelo de machine learning que analisa sentimentos em textos usando Python, TensorFlow e processamento de linguagem natural.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'TensorFlow', 'Pandas', 'Scikit-learn', 'NLTK'],
+      category: 'ai&data',
+      github: '#',
+      live: '#',
+      featured: true
+    },
+    {
+      id: 7,
+      title: 'Dashboard de Analytics em Tempo Real',
+      description: 'Dashboard interativo para visualização de dados com gráficos dinâmicos e métricas em tempo real.',
+      image: '/api/placeholder/600/400',
+      technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
+      category: 'ai&data',
+      github: '#',
+      live: '#',
+      featured: false
+    },
+    {
+      id: 8,
+      title: 'Chatbot Inteligente com IA',
+      description: 'Assistente virtual que responde perguntas usando processamento de linguagem natural e aprendizado de máquina.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'OpenAI API', 'Flask', 'React', 'WebSocket'],
+      category: 'ai&data',
+      github: '#',
+      live: '#',
+      featured: false
+    },
+    {
+      id: 9,
+      title: 'Pipeline CI/CD com Docker',
+      description: 'Sistema de integração e deploy contínuo usando Docker, GitHub Actions e Kubernetes para automação completa.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Docker', 'Kubernetes', 'GitHub Actions', 'Terraform', 'AWS'],
+      category: 'devops',
+      github: '#',
+      live: '#',
+      featured: true
+    },
+    {
+      id: 10,
+      title: 'Infraestrutura Cloud AWS',
+      description: 'Arquitetura de microserviços na nuvem com auto-scaling, load balancing e monitoramento em tempo real.',
+      image: '/api/placeholder/600/400',
+      technologies: ['AWS', 'Lambda', 'API Gateway', 'RDS', 'CloudWatch'],
+      category: 'cloud',
+      github: '#',
+      live: '#',
+      featured: false
+    }
 
   ]
 
   const categories = [
     { key: 'all', label: 'Todos' },
-    { key: 'fullstack', label: 'Fullstack' },
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
+    { key: 'ai&data', label: 'AI & Data' },
+    { key: 'devops', label: 'DevOps' },
+    { key: 'cloud', label: 'Cloud' },
   ]
 
   const filteredProjects = filter === 'all' 
@@ -92,14 +149,14 @@ const Projects = () => {
 
           {/* Filter Tabs - Mobile-First */}
           <div className="flex justify-center mb-8 sm:mb-12">
-            <div className="inline-flex flex-col sm:flex-row bg-gray-100 dark:bg-gray-800 rounded-2xl sm:rounded-full p-1 w-full sm:w-auto">
+            <div className="inline-flex flex-col sm:flex-row bg-white dark:bg-gray-900 rounded-2xl sm:rounded-full p-1 shadow-lg w-full sm:w-auto">
               {categories.map((category) => (
                 <button
                   key={category.key}
                   onClick={() => setFilter(category.key)}
                   className={`px-4 sm:px-6 py-3 rounded-xl sm:rounded-full font-medium transition-all duration-300 text-sm sm:text-base w-full sm:w-auto ${
                     filter === category.key
-                      ? 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >

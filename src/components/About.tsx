@@ -23,7 +23,7 @@ const About = () => {
                     {/* Container sem restrições - imagem define o tamanho */}
                     <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900">
                       <img
-                        src="/About.png"
+                        src="/About (3).png"
                         alt="Luciana Sena - Desenvolvedora"
                         className="w-full h-auto object-contain object-center"
                       />
